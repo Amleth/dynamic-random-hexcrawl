@@ -1,5 +1,7 @@
 # Une procédure pour générer dynamiquement des cartes de hexcrawl (application à Oltréé !)
 
+![Capture d'écran](screenshot-01.png)
+
 <!--
 ## Motivation
 
