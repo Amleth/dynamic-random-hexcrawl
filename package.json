@@ -1,0 +1,46 @@
+{
+  "name": "dynamic-random-hexcrawl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch",
+    "b-watch": "brunch watch --server",
+    "b-build-prod": "brunch build --production"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chance": "^1.0.6",
+    "immutability-helper": "^2.1.2",
+    "immutable": "^3.8.1",
+    "lodash": "^4.17.4",
+    "normalize.css": "^5.0.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "react-router": "^3.0.2",
+    "redux": "^3.6.0",
+    "semantic-ui-react": "^0.67.0"
+  },
+  "devDependencies": {
+    "array.prototype.fill": "^1.0.2",
+    "auto-reload-brunch": "^2.7.1",
+    "autoprefixer": "^6.7.6",
+    "babel-brunch": "~6.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "brunch": "^2",
+    "clean-css-brunch": "^2",
+    "csswring": "^5.1.1",
+    "hmr-brunch": "^0.1.1",
+    "jest": "^19.0.2",
+    "jest-cli": "^19.0.2",
+    "less-brunch": "^2.10.0",
+    "postcss-brunch": "^2.0.5",
+    "precss": "^1.4.0",
+    "react-functional": "^2.0.0",
+    "uglify-js-brunch": "^2"
+  }
+}
