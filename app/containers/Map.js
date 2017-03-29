@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import MapComponent from '../components/Map';
-import {exploreHex, inspectHex} from '../actions/index';
+import {exploreHex, exploreMap, inspectHex, resetMap} from '../actions/index';
 
 const mapStateToProps = (state) => ({
   mapRadius: state.mapRadius,
@@ -12,12 +12,10 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => {
   return {
-    exploreHex: hexId => {
-      return dispatch(exploreHex(hexId))
-    },
-    inspectHex: hexId => {
-      return dispatch(inspectHex(hexId))
-    }
+    exploreHex: hexId => dispatch(exploreHex(hexId)),
+    exploreMap: () => dispatch(exploreMap()),
+    inspectHex: hexId => dispatch(inspectHex(hexId)),
+    resetMap: () => dispatch(resetMap())
   };
 };
 

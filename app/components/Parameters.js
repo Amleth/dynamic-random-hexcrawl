@@ -1,9 +1,13 @@
 import React, {PropTypes} from 'react';
+import {Link} from 'react-router-dom';
 import {Input, Label} from 'semantic-ui-react';
 import {vegetation, natural_obstacles} from '../data/oltree';
 
-const Parameters = ({mapRadius, onMapRadiusChange}) => (
-  <section className='parameters_and_captions'>
+const Parameters = ({mapRadius, onMapRadiusChange}) => {
+  return <section className='parameters_and_captions'>
+    <nav>
+      <Link to='m'>⮌ Retour à la carte</Link>
+    </nav>
     <table className='parameters'>
       <thead>
       <tr>
@@ -47,8 +51,8 @@ const Parameters = ({mapRadius, onMapRadiusChange}) => (
       </tr>)}
       </tbody>
     </table>
-  </section>
-);
+  </section>;
+};
 
 Parameters.propTypes = {
   mapRadius: PropTypes.number.isRequired,

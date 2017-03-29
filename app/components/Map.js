@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React, {PropTypes} from 'react';
+import {Link} from 'react-router-dom';
 import {natural_obstacles, relief, vegetation} from '../data/oltree';
 import {makeId} from '../hex/Hex';
 import {position} from '../hex/hex-utils';
@@ -101,13 +102,12 @@ const drawNaturalObstacle = (hex, center) => {
   return <text key={`svg.text.on.${makeId(hex)}`}
                className='natural-obstacle'
                x={center.x + delta.x} y={center.y + delta.y}
-               text-anchor='middle'
   >
     {natural_obstacles[hex.naturalObstacle].symbol}
   </text>;
 };
 
-const Map = ({mapRadius, hexes, inspectedHex, newlyExploredHex, reliefTypesAndWeights, exploreHex, inspectHex}) => {
+const Map = ({mapRadius, hexes, inspectedHex, newlyExploredHex, reliefTypesAndWeights, exploreHex, exploreMap, inspectHex, resetMap}) => {
   const svg_hexagons = [];
   const svg_vegetations = [];
   const svg_natural_obstacles = [];
@@ -206,6 +206,12 @@ const Map = ({mapRadius, hexes, inspectedHex, newlyExploredHex, reliefTypesAndWe
   }
 
   return <section className='map'>
+    <nav>
+      <p>Pour explorer l'archipel, cliquez sur les hexagones accessibles (les hexagones gris contigus aux hexagones explorés).</p>
+      <span className="actionLink" onClick={exploreMap}>⬣ Exploration automatique</span>
+      <span className="actionLink" onClick={resetMap}>⬣ Reset</span>
+      <Link to='p'>☸ Paramètres & légende</Link>
+    </nav>
     <section className='col'>
       <img src='Oltréé !.jpg'></img>
       {inspector}

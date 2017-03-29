@@ -8,9 +8,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => {
   return {
-    onMapRadiusChange: (event, data) => {
-      return dispatch(setMapRadius(parseInt(data.value)));
-    }
+    onMapRadiusChange: (event, data) => dispatch(setMapRadius(parseInt(data.value)))
   };
 };
 
