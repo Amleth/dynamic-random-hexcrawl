@@ -1,4 +1,10 @@
 node_modules
-dist
-public
+dist/
+public/
 .idea
+.yarnclean
+yarn.lock
+build/
+gulpfile.js
+
+build/
