@@ -6,3 +6,4 @@ yarn.lock
 gulpfile.js
 build/
 scp.sh
+yarn-error.log
