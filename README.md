@@ -13,4 +13,4 @@ Le MJ peut ainsi lancer une campagne avec uniquement quelques notes sur les fact
 
 	npm i
 	npm run dev
-	-> http://localhost:3333
+	-> http://localhost:8080
