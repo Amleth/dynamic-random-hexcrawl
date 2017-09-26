@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
-    "dev": "webpack-dev-server --config webpack.config.js --colors --watch"
+    "dev": "webpack-dev-server --config webpack.config.js --colors --watch",
+    "prod": "webpack"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chance": "^1.0.6",
+    "history": "^4.7.2",
     "immutability-helper": "^2.1.2",
     "immutable": "github:facebook/immutable-js#master",
     "lodash": "^4.17.4",

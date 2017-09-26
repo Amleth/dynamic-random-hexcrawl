@@ -1,1 +1,4 @@
 - Déterminer les satellites de la cité
+- Ruines (GLF p. 53)
+- Ajouter un onglet Faction (GLF p. 50)
+- Faire un générateur de communauté, pour pouvoir se passer du GLF ?

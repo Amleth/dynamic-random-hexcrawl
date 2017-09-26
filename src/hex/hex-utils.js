@@ -154,7 +154,7 @@ export const determineRelief = (mapRadius, hexes, hex) => {
   let vegetation, natural_obstacle;
 
   // Relief
-  reliefTypes.forEach(_ => reliefWeights.set(_, 0.25)); // Si d2 fait 7 ou 8 (25%)
+  reliefTypes.forEach(_ => reliefWeights.set(_, 0.25)); // Si le second dé fait 7 ou 8 (25%)
   neighbours.forEach(_ => {
     if (_.charted) reliefWeights.set(_.relief, reliefWeights.get(_.relief) + 1);
   });
