@@ -12,5 +12,5 @@ Le MJ peut ainsi lancer une campagne avec uniquement quelques notes sur les fact
 ## Test
 
 	npm i
-	npm run b-watch
+	npm run dev
 	-> http://localhost:3333

@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica');
+
+$left_column_width: 300px;
+
+/* BASE ELEMENTS */
+
+* {
+  box-sizing: border-box;
+  cursor: default;
+  font-family: 'IM Fell DW Pica', serif !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: center;
+}
+
+td {
+  margin: 0;
+  padding: 0;
+}
+
+th {
+  font-weight: bold;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+/*
+ul {
+    list-style-type: '⬣ ';
+}
+*/
+
+/* "ABSTRACT" ELEMENTS */
+
+.box, .table {
+  background-color: #eee;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px 0 #999;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/* SECTION */
+
+nav {
+  background-color: black;
+  box-shadow: 2px 2px 2px 0 #999;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.5;
+  padding: 5px;
+
+  a, > span.actionLink {
+    border: 1px solid white;
+    color: white;
+    display: inline;
+    text-transform: uppercase;
+    margin: 1px 1em 1px 0;
+    padding: 1px 0.5em;
+    transition: color 0.5s ease;
+    transition: background-color 0.5s ease;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+
+  > span > a, > div > span.actionLink > span {
+    white-space: nowrap;
+  }
+
+  > p {
+    display: inline;
+    font-style: italic;
+    margin-right: 1em;
+  }
+}
+
+section.map {
+  > section.col {
+    font-size: 85%;
+    padding: 5px;
+    position: fixed;
+    text-align: center;
+    width: $left_column_width;
+
+    > img {
+      padding: 15px 0;
+      width: 69%;
+    }
+
+    > table.inspector {
+      max-width: $left_column_width;
+      min-width: $left_column_width;
+
+      td {
+        line-height: 1.25;
+        padding: 5px;
+        text-align: left !important;
+      }
+      td.communityH {
+        border-bottom: none !important;
+        font-weight: bold;
+        text-align: center !important;
+      }
+      td.community {
+        border: none;
+        padding: 0 !important;
+
+        table {
+          border: none !important;
+          margin-top: 0;
+
+          tr {
+            border-top: 1px solid darkgray;
+          }
+
+          td {
+            border: none;
+            padding: 2px 5px 2px 5px;
+
+            &:first-child {
+              border-right: 1px solid darkgray;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+    }
+
+    > table.probaRelief {
+      max-width: $left_column_width;
+      min-width: $left_column_width;
+
+      td:first-child {
+        width: 35px;
+      }
+    }
+
+    table {
+      background-color: #eee;
+      border: 1px solid black;
+      box-shadow: 2px 2px 2px 0 #999;
+      margin-top: 5px;
+      width: 100%;
+    }
+  }
+
+  > svg {
+    margin: 5px 0 0 calc(10px + $left_column_width);
+  }
+}
+
+section.parameters_and_captions {
+  table {
+    background-color: #eee;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px 0 #999;
+    float: left;
+    margin: 15px;
+  }
+
+  table.parameters {
+    background-color: transparent;
+
+    td, th {
+      border: none;
+      padding: 5px;
+    }
+  }
+
+  table.caption {
+    td {
+      padding: 0 10px;
+    }
+    th {
+      padding: 5px 10px;
+    }
+  }
+}
+
+/* SVG */
+
+svg * {
+  font-family: 'Gentium' !important;
+}
+
+circle {
+  pointer-events: visiblePainted;
+}
+
+line {
+  pointer-events: visiblePainted;
+}
+
+polygon {
+  pointer-events: visiblePainted;
+  stroke: black;
+  stroke-width: 1;
+  transition: fill 0.33s ease;
+}
+
+polygon.uncharted:hover {
+  fill: gold;
+}
+
+text {
+  alignment-baseline: middle;
+  pointer-events: none;
+  text-anchor: middle;
+}
+
+.natural-obstacle {
+  $_: 1px;
+  $c: #300;
+
+  color: red;
+  fill: red;
+  text-shadow: $_ 0 $_ $c, -$_ 0 $_ $c, 0 $_ $_ $c,0 -$_ $_ $c, $_ $_ $_ $c,$_ -$_ $_ $c, -$_ $_ $_ $c,-$_ -$_ $_ $c;
+}
+
+text.vegetation {
+  fill: black;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+line {
+  stroke: black;
+  stroke-opacity:0.1;
+  stroke-width: 1px;
+}
+
+.community-text {
+  color: white;
+  fill: white;
+  font-size: 19px;
+
+  $_: 1px;
+  $c: darkblue;
+  text-shadow: $_ 0 $_ $c, -$_ 0 $_ $c, 0 $_ $_ $c,0 -$_ $_ $c, $_ $_ $_ $c,$_ -$_ $_ $c, -$_ $_ $_ $c,-$_ -$_ $_ $c;
+}

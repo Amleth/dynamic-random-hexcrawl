@@ -10,7 +10,7 @@ import {
   pickRandomHex,
   setOuterRimRelief,
   updateHex
-} from '../../app/hex/hex-utils';
+} from '../../src/hex/hex-utils';
 
 test('Get the distance of a hex from map center', () => {
   expect(distanceFromCenter(0, 0)).toBe(0);

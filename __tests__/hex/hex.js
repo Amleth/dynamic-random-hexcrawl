@@ -1,4 +1,4 @@
-import {Hex, makeId} from '../../app/hex/Hex';
+import {Hex, makeId} from '../../src/hex/Hex';
 
 test('Build a new Hex', () => {
   const h = new Hex({q: 19, r: 82, relief: 'grass', charted: true});

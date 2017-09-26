@@ -1,6 +1,6 @@
 node_modules
 dist/
-public/
+dist/
 .idea
 .yarnclean
 yarn.lock
